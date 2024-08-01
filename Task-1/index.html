@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Navigation Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            transition: background-color 0.5s ease;
+        }
+
+        .nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .nav a:hover {
+            color: #ccc;
+        }
+
+        .nav.scrolled {
+            background-color: #555;
+        }
+
+        .nav li.active {
+            background-color: #666;
+        }
+
+        .nav li:hover {
+            background-color: #444;
+        }
+
+        .content {
+            padding-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="nav" class="nav">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <h1 id="home">Welcome to our website!</h1>
+        <p>A website (also written as a web site) is a collection of web pages and related content that is identified by
+            a common domain name and published on at least one web server. Websites are typically dedicated to a
+            particular topic or purpose, such as news, education, commerce, entertainment, or social media. </p>
+        <h2 id="about">About us</h2>
+        <p>All publicly-accessible websites collectively constitute the World Wide Web. There are also private websites that can only be accessed on a private network, such as a company's internal website for its employees. Users can access websites on a range of devices, including desktops, laptops, tablets, and smartphones. The app used on these devices is called a web browser.</p>
+        <h2 id="contact">Contact us</h2>
+        <p> website navigation menu is an organized list of links to other web pages, usually internal site pages. Navigation menus appear in page headers or sidebars across a website, allowing visitors to access the most useful pages quickly.</p>
+    </div>
+
+    <script>
+        const nav = document.getElementById('nav');
+        const navLinks = document.querySelectorAll('.nav a');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        navLinks.forEach((link) => {
+            link.addEventListener('mouseover', () => {
+                link.parentNode.classList.add('hover');
+            });
+            link.addEventListener('mouseout', () => {
+                link.parentNode.classList.remove('hover');
+            });
+        });
+
+        // Add active class to current page
+        const currentPage = window.location.pathname;
+        navLinks.forEach((link) => {
+            if (link.href === currentPage) {
+                link.parentNode.classList.add('active');
+            }
+        });
+    </script>
+</body>
+
+</html>
