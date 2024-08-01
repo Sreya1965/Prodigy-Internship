@@ -1,0 +1,73 @@
+/* Home Page CSS */
+#home {
+    background-image: linear-gradient(to bottom, #f7f7f7, #fff);
+    padding: 100px 0;
+}
+
+#home h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+}
+
+#home img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+}
+
+/* About Me Section CSS */
+#about {
+    background-image: linear-gradient(to bottom, #fff, #f7f7f7);
+    padding: 100px 0;
+}
+
+#about h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+}
+
+#about img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+}
+/* styles.css */
+#about {
+    background-image: linear-gradient(to bottom, #fff, #f7f7f7);
+    padding: 100px 0;
+}
+
+#about h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+}
+
+#about p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+#about h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+}
+
+#about ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#about li {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+}
